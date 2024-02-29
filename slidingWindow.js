@@ -1,3 +1,11 @@
+
+//The sliding window approach is a technique for finding subarrays or substrings that satisfy a given condition. It involves creating a window and moving the window based on certain conditions.//
+
+
+// "Find the maximum sum of sub-array of size k with the time complexity of O(N).
+// an O(N) time complexity means that we need to solve the problem in a single iteration.
+// Array = [1, 2, 6, 2, 4, 1], k = 3"
+
 function findMaxSumOfSequence(listOfItems, sequenceLength) {
     if (listOfItems.length < sequenceLength) {
         return null;
