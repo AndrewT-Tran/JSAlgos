@@ -1,0 +1,24 @@
+function twoSum (arr, target) {
+    let left = 0;
+    let right = arr.length - 1;
+
+    while (left < right) {
+        // declare a var that keeps track of the sum
+        const currentSum = arr[left] + arr[right];
+
+        if (currentSum === target) {
+            // if found, returns the index of elements that add up to target
+            return [left, right];
+            // if currentSum is left we move left pointer to the right
+        } else if (currentSum < target) {
+            left += 1;
+            // if current sum is less, we move the right pointer left
+        } else {
+            right -= 1;
+        }
+    }
+
+    return `No pairs add up to ${target}`;
+}
+
+console.log(twoSum([1, 2, 3, 5, 3, 5], 18));
